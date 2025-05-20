@@ -12,7 +12,7 @@ A simple React Counter App built to practice the basics of React, including `use
 
 - React (with functional components)
 - JavaScript (ES6)
-- CSS
+- CSS (Bootstrap)
 - Vite
 
 ## Learning Goals
