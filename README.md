@@ -52,6 +52,7 @@ src/
 ├── main.jsx            # React entry point
 └── App.css             # (Optional) App styling - to be completed later
 
+
 Preview
 Coming soon!
 
