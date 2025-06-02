@@ -82,9 +82,25 @@ body::before {
     inset 0 1px 0 rgba(255, 255, 255, 0.8);
 }
 
-/* Card body */
+/* Additional text color fixes */
+.text-muted, .small {
+  color: #6b7280 !important;
+}
+
 .card-body {
   padding: 3rem 2.5rem;
+  color: #374151;
+}
+
+/* Ensure proper contrast for all text elements */
+.card .small, .card .text-muted {
+  color: #6b7280 !important;
+}
+
+/* Bootstrap override for better visibility */
+.btn:disabled {
+  opacity: 0.6 !important;
+  cursor: not-allowed !important;
 }
 
 /* Title styles */
@@ -103,11 +119,15 @@ body::before {
 .display-4 {
   font-size: 4.5rem;
   font-weight: 800;
-  color: #2d3748;
+  color: #1a202c !important;
   margin-bottom: 2.5rem;
   position: relative;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, #2d3748, #1a202c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .display-4::after {
@@ -137,7 +157,7 @@ body::before {
   padding: 1rem 2rem;
   font-size: 1.1rem;
   font-weight: 600;
-  border: none;
+  border: none !important;
   border-radius: 16px;
   position: relative;
   overflow: hidden;
@@ -145,6 +165,7 @@ body::before {
   text-transform: uppercase;
   letter-spacing: 0.5px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  color: white !important;
 }
 
 .btn::before {
@@ -174,35 +195,71 @@ body::before {
 
 /* Success button (Increase) */
 .btn-success {
-  background: linear-gradient(135deg, #48bb78, #38a169);
-  color: white;
+  background: linear-gradient(135deg, #48bb78, #38a169) !important;
+  color: white !important;
+  border: none !important;
 }
 
 .btn-success:hover {
-  background: linear-gradient(135deg, #38a169, #2f855a);
+  background: linear-gradient(135deg, #38a169, #2f855a) !important;
   box-shadow: 0 8px 24px rgba(72, 187, 120, 0.4);
+  color: white !important;
+}
+
+.btn-success:focus {
+  background: linear-gradient(135deg, #38a169, #2f855a) !important;
+  box-shadow: 0 8px 24px rgba(72, 187, 120, 0.4);
+  color: white !important;
 }
 
 /* Secondary button (Reset) */
 .btn-secondary {
-  background: linear-gradient(135deg, #718096, #4a5568);
-  color: white;
+  background: linear-gradient(135deg, #718096, #4a5568) !important;
+  color: white !important;
+  border: none !important;
 }
 
 .btn-secondary:hover {
-  background: linear-gradient(135deg, #4a5568, #2d3748);
+  background: linear-gradient(135deg, #4a5568, #2d3748) !important;
   box-shadow: 0 8px 24px rgba(113, 128, 150, 0.4);
+  color: white !important;
+}
+
+.btn-secondary:focus {
+  background: linear-gradient(135deg, #4a5568, #2d3748) !important;
+  box-shadow: 0 8px 24px rgba(113, 128, 150, 0.4);
+  color: white !important;
+}
+
+.btn-secondary:disabled {
+  background: linear-gradient(135deg, #e2e8f0, #cbd5e0) !important;
+  color: #a0aec0 !important;
+  opacity: 0.6;
 }
 
 /* Danger button (Decrease) */
 .btn-danger {
-  background: linear-gradient(135deg, #f56565, #e53e3e);
-  color: white;
+  background: linear-gradient(135deg, #f56565, #e53e3e) !important;
+  color: white !important;
+  border: none !important;
 }
 
 .btn-danger:hover {
-  background: linear-gradient(135deg, #e53e3e, #c53030);
+  background: linear-gradient(135deg, #e53e3e, #c53030) !important;
   box-shadow: 0 8px 24px rgba(245, 101, 101, 0.4);
+  color: white !important;
+}
+
+.btn-danger:focus {
+  background: linear-gradient(135deg, #e53e3e, #c53030) !important;
+  box-shadow: 0 8px 24px rgba(245, 101, 101, 0.4);
+  color: white !important;
+}
+
+.btn-danger:disabled {
+  background: linear-gradient(135deg, #fed7d7, #feb2b2) !important;
+  color: #fc8181 !important;
+  opacity: 0.6;
 }
 
 /* Pulse animation for counter changes */
@@ -259,7 +316,12 @@ body::before {
   }
   
   .display-4 {
-    color: #f7fafc;
+    color: #f7fafc !important;
+    background: linear-gradient(135deg, #f7fafc, #e2e8f0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
   }
   
   .card-title {
@@ -267,6 +329,10 @@ body::before {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+  }
+  
+  .text-muted {
+    color: #a0aec0 !important;
   }
 }
 
