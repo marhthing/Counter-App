@@ -357,4 +357,4 @@ body::before {
   background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 37%, #f0f0f0 63%);
   background-size: 400px 100%;
   animation: shimmer 1.5s ease-in-out infinite;
-}
+} 
